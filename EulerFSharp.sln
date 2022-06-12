@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerFSharp", "EulerFSharp\EulerFSharp.fsproj", "{7A0CDA5A-F739-4332-85C7-12F9280496FF}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WorkInProgress", "WorkInProgress\WorkInProgress.fsproj", "{2ACB5C88-FE53-46B4-824E-068C2AF0E59C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{7A0CDA5A-F739-4332-85C7-12F9280496FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A0CDA5A-F739-4332-85C7-12F9280496FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A0CDA5A-F739-4332-85C7-12F9280496FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACB5C88-FE53-46B4-824E-068C2AF0E59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACB5C88-FE53-46B4-824E-068C2AF0E59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACB5C88-FE53-46B4-824E-068C2AF0E59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACB5C88-FE53-46B4-824E-068C2AF0E59C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
