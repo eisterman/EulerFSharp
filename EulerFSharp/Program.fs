@@ -9,6 +9,7 @@ let main _args =
         match pnum with
         | 1 -> Problem1.result
         | 2 -> Problem2.result
+        | 3 -> Problem3.result |> int
         | _ -> raise (System.ArgumentException("Problem requested doesn't exists"))
     printfn $"Result Problem {pnum}:\n{result}"
     0
