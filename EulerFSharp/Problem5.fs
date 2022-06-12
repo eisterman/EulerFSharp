@@ -1,4 +1,4 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
+﻿module EulerFSharp.Problem5
 
 (*
 Il problema 5 consiste nel prendere i primi 20 numeri da 1 a 20, scomporli in fattori primi e ottenere una lista
@@ -13,8 +13,6 @@ Il test di fattorizzazione su n può essere fatto da 2 a sqrt(n).
 Questo vuol dire che se i è il numero di test ed il ciclo while normalmente sarebbe `while i <= sqrt(n)`, esso
 può essere trasformato in `while i^2 <= n` per ridurre i calcoli eseguiti.
 *)
-
-open System
 
 let rec construct_factorize_map n i =
     match n with
@@ -34,7 +32,7 @@ let prime_factorize n =
     match n with
     | 1 -> Map.empty.Add (1,1)
     | _ when n >= 2 -> construct_factorize_map n 2
-    | _ -> raise (ArgumentException "Required integer greater than 0")
+    | _ -> raise (System.ArgumentException "Required integer greater than 0")
 
 let map_merge (map1: Map<int,int>) (map2: Map<int,int>) =
     let folder (m1: Map<int,int>) key value =
@@ -44,7 +42,7 @@ let map_merge (map1: Map<int,int>) (map2: Map<int,int>) =
             m1.Add (key, value)
     Map.fold folder map1 map2
 
-let result = [2 .. 20] |> List.map prime_factorize |> List.fold map_merge Map.empty
+let result = [2 .. 20]
+             |> List.map prime_factorize
+             |> List.fold map_merge Map.empty
              |> Map.fold (fun acc key value -> acc * int(float(key) ** value)) 1
-
-printfn $"Result: %A{result}"

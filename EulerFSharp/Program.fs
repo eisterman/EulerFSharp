@@ -11,6 +11,7 @@ let main _args =
         | 2 -> Problem2.result
         | 3 -> Problem3.result |> int
         | 4 -> Problem4.result
+        | 5 -> Problem5.result
         | _ -> raise (System.ArgumentException("Problem requested doesn't exists"))
     printfn $"Result Problem {pnum}:\n{result}"
     0
